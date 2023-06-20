@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Price Prediction</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+ 
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'main.css') }}">
+    
+   
+</head>
+
+<body>
+
+<!-- header section starts  -->
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+
+
+
+
+<section class="order" id="howitworks">
+
+    <h1 class="heading"> <span>Predict</span> now </h1>
+    <h2>All you have to input your variables and we will tell you the info LOL</h2>
+    <div class="row">
+
+       <form action="/predict" method="post">
+
+            <div class="inputBox">
+                <input type="number" placeholder="total battery energy stored @ one time " name="battery_power">
+                <input type="number" placeholder="Bluetooth"name="blue">
+            </div>
+
+            <div class="inputBox">
+                <input type="float" placeholder="Clock Speed" name="clock_speed">
+                <input type="number" placeholder="Dual SIM have or no - answer by 1 or 0 " name="dual_sim">
+            </div>
+            <div class="inputBox">
+                <input type="number" placeholder="Front Camera Mega Pixels " name="fc">
+                <input type="number" placeholder="4G have or not - answer by 1 or 0"name="four_g">
+            </div>
+            <div class="inputBox">
+                <input type="number" placeholder="Internal Memory in GB" name="int_memory">
+                <input type="float" placeholder="Mobile depth in cm"name="m_dep">
+            </div>
+            <div class="inputBox">
+                <input type="number" placeholder="Weight of mobile phone" name="mobile_wt">
+                <input type="number" placeholder="Number of cores of processor"name="n_cores">
+            </div>
+            <div class="inputBox">
+                <input type="number" placeholder="Primary Camera mega pixels" name="pc">
+                <input type="number" placeholder="Pixel resolution height"name="px_height">
+            </div>
+            <div class="inputBox">
+                <input type="number" placeholder="Pixel resolution width" name="px-width">
+                <input type="number" placeholder="RAM in Megabytes"name="ram">
+            </div>
+            <div class="inputBox">
+                <input type="number" placeholder="Screen height of mobile phone" name="sc_h">
+                <input type="number" placeholder="Screen width of mobile phone"name="sc_w">
+            </div>
+            <div class="inputBox">
+                <input type="number" placeholder="Longest time that single battery charge" name="talk_time">
+                <input type="number" placeholder="Has 3G or not - answer 1 or 0"name="three_g">
+            </div>
+            <div class="inputBox">
+                <input type="number" placeholder="Has Touch Screen or not - answer 1 or 0" name="touch_screen">
+                <input type="number" placeholder="Has WIFI or not - answer 1 or 0"name="wifi">
+            </div>
+
+                <input type="submit" value="predict now" class="btn">
+            
+            <h2>{{ mp }}</h2>
+            
+                
+        </form>
+        
+    </div>
+    
+
+</section>
+
+<!-- order section ends -->
+
+<!-- footer section  -->
+
+<section class="footer">
+
+    <div class="share">
+        <a href="#" class="btn">Go Up</a>
+    </div>
+
+
+</section>
+
+
+
+
+</body>
+</html>
